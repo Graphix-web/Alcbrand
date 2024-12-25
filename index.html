@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALC Clothing Brand</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<script>
+    
+function openNav() {
+ let menu= document.getElementById("menu");
+menu.style.display ="flex";
+document.getElementById("open").style.display="none";
+}
+
+/* Set the width of the side navigation to 0 */
+function closeNav() {
+  document.getElementById("menu").style.display = "none";
+document.getElementById("open").style.display="block";
+}
+function addcart(cart){
+let previousSibling = cart.previousElementSibling
+    alert(previousSibling.innerText+" has been added to your cart" )
+}
+</script>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <nav>
+            <div class="menu" id="menu">
+                <a href="#" onclick="closeNav()"><i class="material-icons">close</i></a>
+                <a href="#">Women</a>
+                <a href="#">Men</a>
+                <a href="#">Kids</a>
+                <a href="#">Accessories</a>
+            </div>
+            <span id="open" onclick="openNav()"><i class="material-icons">menu</i>
+</span>
+        </nav>
+        <div class="search-bar">
+            <input type="search" placeholder="Search...">
+            <button><i class="material-icons">search</i></button>
+        
+        <i class="material-icons">shopping_cart</i>
+            <a href="https://graphix-web.github.io/Alc/"><i class="material-icons">person</i></a>
+    </div>   
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <img src="hero-image.jpg" alt="Hero Image">
+        <h1>Welcome to ALC Clothing Brand</h1>
+        <p>I have been waiting for you🎉, welcome to Ada luxury couture, your contemporary tailoring on the go. Shop affordable luxury made in Nigeria wears. Enjoy.</p>
+        <button>Shop Now</button>
+    </section>
+
+    <!-- Featured Products Section -->
+    <section class="featured-products">
+        <h2>Featured Products</h2>
+        <div class="product-grid">
+            <div class="product">
+                <img src="product1.jpg" alt="Product 1"><p>₦2000</p>
+                <h3>Product 1</h3>
+                <button onclick="addcart(this)" class="cart">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="product2.jpg" alt="Product 2"><p>₦3000</p>
+                <h3>Product 2</h3>
+                <button onclick="addcart(this)" class="cart">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="product3.jpg" alt="Product 3"><p>₦5000</p>
+                <h3>Product 3</h3>
+                <button class="cart" onclick="addcart(this)">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; ALC Clothing BRAND 2024</p>
+        <ul>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">FAQs</a></li>
+            <li><a href="#">Terms and Conditions</a></li>
+        </ul>
+        <div class="social-media-links">
+            <a href="https://www.instagram.com/ada_luxury_couture/profilecard/?igsh=MW5tcTQ1dnMwdXI0bQ=="><i class="material-icons">photo_camera</i><span>ada_luxury_couture</span></a>
+            <a href="https://wa.me/2347048901551"><i class="material-icons">call</i><span>07048901551</span></a>
+        </div>
+    </footer>
+<style>
+    *{
+    padding:;
+    border:none;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color:#6F4E37;
+}
+#open{
+    position:absolute ;
+    left:0px;
+    padding:5px;
+}
+.menu{
+    display:none;
+    flex-direction: column;
+    padding:20px;
+}
+span{
+    padding:2%;
+}
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1em;
+    text-align: center;
+    position: sticky;
+    top: 0;
+}
+a{
+    color:white;
+}
+button{
+    background-color:#FFFDD0;
+    border-radius:10%;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+header nav a {
+    color: black;
+    text-decoration:none;
+</style>
+</body>
+</html>
